@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("FuncProg")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4481164b857fda3f0f751ea56f4c22f408e06a0c")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dded74e4c3ca01592707a1452a9317cdf73c84ff")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("FuncProg")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("FuncProg")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

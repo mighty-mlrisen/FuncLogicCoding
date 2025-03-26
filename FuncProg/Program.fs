@@ -7,6 +7,7 @@ open Fibonacci
 open LogicFunc
 open TraversalNumber
 open FavoriteLanguage
+open Number
 
 [<EntryPoint>]
 let main args =
@@ -84,4 +85,13 @@ let main args =
     let travCoprimeCond = traversalNumberCoprimeСondition 10 sum 0 smallerThan5
 
     Console.WriteLine("Сумма взаимно простых с 10 (< 5): " + travCoprimeCond.ToString())
+
+    let method1 = countEvenNotCoprime 10
+    Console.WriteLine("Кол-ство не взаимно простых с 10 (четные): " + method1.ToString())
+
+    let method2 = maxDigitNotDiv3 15464
+    Console.WriteLine("Max цифра числа 15464 (не делится на 3) : " + method2.ToString())
+
+    //let method3 = 
+
     0
