@@ -9,6 +9,9 @@
     <Compile Include="QuadraticEquation.fs" />
     <Compile Include="CircleCylinder.fs" />
     <Compile Include="DigitSum.fs" />
+    <Compile Include="Fibonacci.fs" />
+    <Compile Include="LogicFunc.fs" />
+    <Compile Include="TraversalNumber.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

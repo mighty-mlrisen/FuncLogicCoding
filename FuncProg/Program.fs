@@ -3,6 +3,9 @@ open QuadraticEquation
 open CircleCylinder
 open DigitSum
 open System
+open Fibonacci
+open LogicFunc
+open TraversalNumber
 
 [<EntryPoint>]
 let main args =
@@ -35,4 +38,14 @@ let main args =
 
     let sum2 = digitSumDown n
     Console.WriteLine("Сумма цифр (рекурсия вниз): " + sum2.ToString())
+
+    let fact = logicFunc false 5
+    Console.WriteLine("Факториал числа 5: " + fact.ToString())
+
+    let max = traversalNumber 184 (fun a b -> if a > b then a else b) 0
+    Console.WriteLine("Max цифра числа 184: " + max.ToString())
+    let sum a b = a + b
+    Console.WriteLine(traversalNumber 123 sum 0)
+
+    
     0
