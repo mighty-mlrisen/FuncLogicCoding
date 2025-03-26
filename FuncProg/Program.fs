@@ -45,7 +45,22 @@ let main args =
     let max = traversalNumber 184 (fun a b -> if a > b then a else b) 0
     Console.WriteLine("Max цифра числа 184: " + max.ToString())
     let sum a b = a + b
+    Console.Write("Сумма цифр числа 123: ")
     Console.WriteLine(traversalNumber 123 sum 0)
 
+    let countDigit acc n = 
+        acc + 1
+    
+    let maxDigit a b =
+     match (a, b) with
+     | (a, b) when a >= b -> a
+     | _ -> b
+
+    let isEven n = (n % 2 = 0)
+
+    let travCond = traversalNumberСondition 1456 countDigit 0 isEven
+
+    Console.WriteLine("Кол-ство четных цифр числа 1456: " + travCond.ToString())
+    
     
     0
