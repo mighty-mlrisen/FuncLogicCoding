@@ -12,6 +12,7 @@
     <Compile Include="Fibonacci.fs" />
     <Compile Include="LogicFunc.fs" />
     <Compile Include="TraversalNumber.fs" />
+    <Compile Include="FavoriteLanguage.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

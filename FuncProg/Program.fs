@@ -6,6 +6,7 @@ open System
 open Fibonacci
 open LogicFunc
 open TraversalNumber
+open FavoriteLanguage
 
 [<EntryPoint>]
 let main args =
@@ -58,9 +59,29 @@ let main args =
 
     let isEven n = (n % 2 = 0)
 
+    let smallerThan5 n = n < 5
+
     let travCond = traversalNumberСondition 1456 countDigit 0 isEven
 
     Console.WriteLine("Кол-ство четных цифр числа 1456: " + travCond.ToString())
-    
-    
+
+    let languagePos = (fun() -> Console.ReadLine()) >> chooseLanguage >> Console.WriteLine
+    Console.WriteLine("Твой любимый язык программирования")
+    languagePos ()
+
+    let languageCurry input output = 
+        output (chooseLanguage (input()))
+
+    Console.WriteLine("Твой любимый язык программирования")
+    languageCurry Console.ReadLine Console.WriteLine
+
+    let travCoprime = traversalNumberCoprime 10 sum 0
+    Console.WriteLine("Сумма взаимно простых с 10: " + travCoprime.ToString())
+
+    let euler = eulerNumber 10
+    Console.WriteLine("Число Эйлера для 10: " + euler.ToString())
+
+    let travCoprimeCond = traversalNumberCoprimeСondition 10 sum 0 smallerThan5
+
+    Console.WriteLine("Сумма взаимно простых с 10 (< 5): " + travCoprimeCond.ToString())
     0
