@@ -8,6 +8,7 @@ open LogicFunc
 open TraversalNumber
 open FavoriteLanguage
 open Number
+open NumberUI
 
 [<EntryPoint>]
 let main args =
@@ -92,6 +93,17 @@ let main args =
     let method2 = maxDigitNotDiv3 15464
     Console.WriteLine("Max цифра числа 15464 (не делится на 3) : " + method2.ToString())
 
-    //let method3 = 
+    let method3 = productNum 12
+    Console.WriteLine("результат 3 метода для 12: " + method3.ToString())
 
+    Console.WriteLine("Введите 2 числа: ")
+
+    let input = System.Console.ReadLine().Split(' ')
+    let x = input.[0]
+    let y = input.[1]
+    let chosen_function = choose_function x
+    let y = int y
+    let result = run_method chosen_function y
+    Console.WriteLine(result.ToString())
     0
+// project 23 fs 7 - задача 5  -10 есть решеение , после 10 самимм 

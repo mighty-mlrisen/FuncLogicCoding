@@ -14,6 +14,7 @@
     <Compile Include="TraversalNumber.fs" />
     <Compile Include="FavoriteLanguage.fs" />
     <Compile Include="Number.fs" />
+    <Compile Include="NumberUI.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
