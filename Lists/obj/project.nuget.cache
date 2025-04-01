@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bWksC+MiQIc=",
+  "success": true,
+  "projectFilePath": "/Users/artemmazurenko/FuncLogicCoding/Lists/Lists.fsproj",
+  "expectedPackageFiles": [
+    "/Users/artemmazurenko/.nuget/packages/fsharp.core/8.0.403/fsharp.core.8.0.403.nupkg.sha512"
+  ],
+  "logs": []
+}
