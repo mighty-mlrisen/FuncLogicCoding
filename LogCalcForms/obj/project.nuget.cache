@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vwRjDA9HEJU=",
+  "success": true,
+  "projectFilePath": "/Users/artemmazurenko/FuncLogicCoding/LogCalcForms/LogCalcForms.fsproj",
+  "expectedPackageFiles": [
+    "/Users/artemmazurenko/.nuget/packages/fsharp.core/8.0.403/fsharp.core.8.0.403.nupkg.sha512"
+  ],
+  "logs": []
+}

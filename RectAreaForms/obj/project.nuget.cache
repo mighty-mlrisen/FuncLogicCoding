@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7fIPexfaupI=",
+  "success": true,
+  "projectFilePath": "/Users/artemmazurenko/FuncLogicCoding/RectAreaForms/RectAreaForms.fsproj",
+  "expectedPackageFiles": [
+    "/Users/artemmazurenko/.nuget/packages/fsharp.core/8.0.403/fsharp.core.8.0.403.nupkg.sha512"
+  ],
+  "logs": []
+}
