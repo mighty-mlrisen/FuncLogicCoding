@@ -34,7 +34,3 @@ let minElement list =
     | [] -> 0
     | h::t -> 
         reduce t min (fun a -> true ) h
-
-
-
-

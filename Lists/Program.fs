@@ -27,4 +27,3 @@ let main args =
     let minList = minElement list1
     Console.WriteLine("мин элемент:" + minList.ToString())
     0
-// project 23 fs 7 - задача 5  -10 есть решеение , после 10 самимм 
