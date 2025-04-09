@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4hXR2I6/gi4=",
+  "success": true,
+  "projectFilePath": "/Users/artemmazurenko/FuncLogicCoding/TextParser/TextParser.fsproj",
+  "expectedPackageFiles": [
+    "/Users/artemmazurenko/.nuget/packages/fparsec/1.1.1/fparsec.1.1.1.nupkg.sha512",
+    "/Users/artemmazurenko/.nuget/packages/fsharp.core/8.0.403/fsharp.core.8.0.403.nupkg.sha512"
+  ],
+  "logs": []
+}
