@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("Shapes")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18f09932ad040e832b77609980bc8d47bd1c1916")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f613d766c83643e9f979902efa2fc80176828852")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("Shapes")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("Shapes")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/artemmazurenko/FuncLogicCoding/Shapes/Shapes.fsproj": {}
+    "/Users/artemmazurenko/FuncLogicCoding/f#/Shapes/Shapes.fsproj": {}
   },
   "projects": {
-    "/Users/artemmazurenko/FuncLogicCoding/Shapes/Shapes.fsproj": {
+    "/Users/artemmazurenko/FuncLogicCoding/f#/Shapes/Shapes.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artemmazurenko/FuncLogicCoding/Shapes/Shapes.fsproj",
+        "projectUniqueName": "/Users/artemmazurenko/FuncLogicCoding/f#/Shapes/Shapes.fsproj",
         "projectName": "Shapes",
-        "projectPath": "/Users/artemmazurenko/FuncLogicCoding/Shapes/Shapes.fsproj",
+        "projectPath": "/Users/artemmazurenko/FuncLogicCoding/f#/Shapes/Shapes.fsproj",
         "packagesPath": "/Users/artemmazurenko/.nuget/packages/",
-        "outputPath": "/Users/artemmazurenko/FuncLogicCoding/Shapes/obj/",
+        "outputPath": "/Users/artemmazurenko/FuncLogicCoding/f#/Shapes/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/artemmazurenko/.nuget/NuGet/NuGet.Config"
