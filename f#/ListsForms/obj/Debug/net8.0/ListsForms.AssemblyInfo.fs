@@ -7,11 +7,11 @@ open System
 open System.Reflection
 
 
-[<assembly: System.Reflection.AssemblyCompanyAttribute("VehiclePassport")>]
+[<assembly: System.Reflection.AssemblyCompanyAttribute("ListsForms")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
 [<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b27d2bfaeff6cc31246cd6f698315a79067e8e30")>]
-[<assembly: System.Reflection.AssemblyProductAttribute("VehiclePassport")>]
-[<assembly: System.Reflection.AssemblyTitleAttribute("VehiclePassport")>]
+[<assembly: System.Reflection.AssemblyProductAttribute("ListsForms")>]
+[<assembly: System.Reflection.AssemblyTitleAttribute("ListsForms")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
 do()
