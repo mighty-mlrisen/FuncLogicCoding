@@ -7,6 +7,12 @@
 
   <ItemGroup>
     <Compile Include="Lists.fs" />
+    <Compile Include="BinaryTree.fs" />
+    <Compile Include="ListUtils.fs" />
+    <Compile Include="TasksList.fs" />
+    <Compile Include="NormalizedFactorPairs.fs" />
+    <Compile Include="RandomWordOrder.fs" />
+    <Compile Include="SortByAverageDeviation.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

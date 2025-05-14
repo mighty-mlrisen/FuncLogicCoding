@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("ArraysForms")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b27d2bfaeff6cc31246cd6f698315a79067e8e30")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+646314384e8e62ef73776a8ad5fc2a25be9eac08")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("ArraysForms")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("ArraysForms")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

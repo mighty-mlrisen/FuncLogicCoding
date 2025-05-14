@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/artemmazurenko/FuncLogicCoding/Lists/Lists.fsproj": {}
+    "/Users/artemmazurenko/FuncLogicCoding/f#/Lists/Lists.fsproj": {}
   },
   "projects": {
-    "/Users/artemmazurenko/FuncLogicCoding/Lists/Lists.fsproj": {
+    "/Users/artemmazurenko/FuncLogicCoding/f#/Lists/Lists.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artemmazurenko/FuncLogicCoding/Lists/Lists.fsproj",
+        "projectUniqueName": "/Users/artemmazurenko/FuncLogicCoding/f#/Lists/Lists.fsproj",
         "projectName": "Lists",
-        "projectPath": "/Users/artemmazurenko/FuncLogicCoding/Lists/Lists.fsproj",
+        "projectPath": "/Users/artemmazurenko/FuncLogicCoding/f#/Lists/Lists.fsproj",
         "packagesPath": "/Users/artemmazurenko/.nuget/packages/",
-        "outputPath": "/Users/artemmazurenko/FuncLogicCoding/Lists/obj/",
+        "outputPath": "/Users/artemmazurenko/FuncLogicCoding/f#/Lists/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/artemmazurenko/.nuget/NuGet/NuGet.Config"

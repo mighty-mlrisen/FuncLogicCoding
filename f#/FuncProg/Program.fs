@@ -55,7 +55,7 @@ let main args =
         acc + 1
     
     let maxDigit a b =
-     match (a, b) with
+     match (a, b) with  
      | (a, b) when a >= b -> a
      | _ -> b
 
