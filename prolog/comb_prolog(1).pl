@@ -280,6 +280,41 @@ nth0(N, [_|T], El) :-
     nth0(N1, T, El).
 
 
+append1([], L, L):-!.
+append1([H|T], L, [H|R]) :- append1(T, L, R).
+
+member(X, [X|_]).
+member(X, [_|T]) :-
+    member(X, T).
+
+
+% Базовый случай: если N однозначно (0–9), то P = N
+product_digits(N, N) :-
+    integer(N),
+    N >= 0,
+    N =< 9.
+
+% Рекурсивный случай: N ≥ 10
+product_digits(N, P) :-
+    integer(N),
+    N > 9,
+    D is N mod 10,        % младшая цифра
+    Rest is N // 10,      % остальные цифры
+    product_digits(Rest, P1),
+    P is D * P1.
+
+
+% sum_list(+List, -Sum)
+% Sum — сумма всех чисел в List.
+
+% Базовый случай: пустой список даёт сумму 0
+sum_list([], 0).
+
+% Рекурсивный случай: список [H|T]
+sum_list([H|T], Sum) :-
+    sum_list(T, RestSum),  % рекурсивно суммируем хвост
+    Sum is H + RestSum.    % прибавляем голову
+
 %sochet(Subset, [a,b,c], 2).
 sochet([],_,0):-!.
 sochet([H|Sub_set],[H|Set],K):-K1 is K-1, sochet(Sub_set,Set,K1).
@@ -342,3 +377,4 @@ build_3a_words_of_k(Alphabet,K,Word) :- make_pos_list(K, 0, PosList),
 	sochet(Pos_a_List, PosList, 3), make_3a_empty_word(K, 0, Pos_a_List, WordEmpty3a), Alphabet = [a|NewAlphabet], 
 	M is K - 3, razm_povt(NewAlphabet, M, [], RestWord), build_word(Word, WordEmpty3a, RestWord).
 
+S

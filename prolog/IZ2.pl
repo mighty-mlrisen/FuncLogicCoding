@@ -27,19 +27,28 @@ parse_edge_line(Line, U, V) :-
     atom_string(U, S1),
     atom_string(V, S2).
 
+
+
 all_maximal_matchings(MaxMs) :-
     findall(edge(U,V), edge(U,V), Edges),
-    findall(M, matching(Edges, M), All),
-    include(is_maximal(All), All, MaxMs).
+    setof(M, matching_maximal(Edges, [], M), MaxMs).
 
-matching(Edges, M) :- match_edges(Edges, [], M).
-match_edges([], Acc, Acc).
-match_edges([E|Es], Acc, M) :-
+
+matching_maximal([], Acc, Acc) :-
+    \+ ( edge(U,V),
+         \+ member(edge(U,V), Acc),
+         \+ conflict(edge(U,V), Acc)
+       ).
+
+matching_maximal([E|Es], Acc, M) :-
     conflict(E, Acc), !,
-    match_edges(Es, Acc, M).
-match_edges([E|Es], Acc, M) :-
-    ( match_edges(Es, [E|Acc], M)
-    ; match_edges(Es, Acc, M)
+    matching_maximal(Es, Acc, M).
+
+matching_maximal([E|Es], Acc, M) :-
+    (   % Вариант взять ребро E
+        matching_maximal(Es, [E|Acc], M)
+    ;   % Вариант пропустить ребро E
+        matching_maximal(Es, Acc, M)
     ).
 
 conflict(edge(U,V), Acc) :-
@@ -49,10 +58,6 @@ conflict(edge(U,V), Acc) :-
     ; member(edge(_,V), Acc)
     ).
 
-is_maximal(All, M) :-
-    \+ ( member(N, All), N \= M, subset_list(M, N) ).
-subset_list([], _).
-subset_list([X|Xs], Ys) :- member(X, Ys), subset_list(Xs, Ys).
 
 write_matchings(File, Matchings) :-
     open(File, write, Out),
