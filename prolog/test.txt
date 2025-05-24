@@ -1,0 +1,134 @@
+(v1,v2)
+(v2,v3)
+(v1,v3)
+(v2,v4)
+(v2,v5)
+(v2,v6)
+
+
+(v1,v2)
+(v2,v3)
+(v3,v4)
+(v4,v5)
+(v5,v1)
+(v6,v8)
+(v8,v10)
+(v10,v7)
+(v7,v9)
+(v9,v6)
+(v1,v6)
+(v2,v7)
+(v3,v8)
+(v4,v9)
+(v5,v10)
+
+
+/*
+edge(a,b).
+edge(b,c).
+edge(c,d).
+edge(c,e).
+edge(e,g).
+edge(a,g).
+edge(g,b).
+*/
+
+
+
+
+
+
+:- dynamic edge/2.
+
+% Пример ввода графа:
+/*
+edge(a,b).
+edge(b,c).
+edge(a,c).
+edge(b,d).
+edge(b,e).
+edge(b,g).
+*/
+/*
+edge(a,b).
+edge(b,c).
+edge(c,d).
+edge(c,e).
+edge(e,g).
+edge(a,g).
+edge(g,b).
+*/
+
+% Граф Петерсона: 10 вершин v1..v10 и 15 ребер
+edge(v1,v2).
+edge(v2,v3).
+edge(v3,v4).
+edge(v4,v5).
+edge(v5,v1).
+
+edge(v6,v8).
+edge(v8,v10).
+edge(v10,v7).
+edge(v7,v9).
+edge(v9,v6).
+
+edge(v1,v6).
+edge(v2,v7).
+edge(v3,v8).
+edge(v4,v9).
+edge(v5,v10).
+
+
+
+% Основной предикат: all_maximal_matchings(-Matchings).
+% Matchings -- список всех паросочетаний, которые не могут быть расширены добавлением какого-либо
+% другого ребра без конфликта (максимальные по включению).
+
+% Генерация всех возможных паросочетаний
+matching(M) :-
+    findall(edge(U,V), edge(U,V), Edges),
+    match_edges(Edges, [], M).
+
+% Рекурсивное построение: либо берём ребро, либо пропускаем
+match_edges([], Acc, Acc).
+match_edges([E|Es], Acc, M) :-
+    conflict(E, Acc), !,
+    match_edges(Es, Acc, M).
+match_edges([E|Es], Acc, M) :-
+    (   % добавить ребро E
+        match_edges(Es, [E|Acc], M)
+    ;   % пропустить ребро E
+        match_edges(Es, Acc, M)
+    ).
+
+% Конфликт, если вершина E уже занята в Acc
+conflict(edge(U,V), Acc) :-
+    ( member(edge(U,_), Acc)
+    ; member(edge(_,U), Acc)
+    ; member(edge(V,_), Acc)
+    ; member(edge(_,V), Acc)
+    ).
+
+% Предикат-утилита: проверка, что список подсписок другого
+subset_list([], _).
+subset_list([X|Xs], Ys) :-
+    member(X, Ys),
+    subset_list(Xs, Ys).
+
+% Поиск всех максимальных по включению паросочетаний
+all_maximal_matchings(MaxMs) :-
+    setof(M, matching(M), All),             % получаем все уникальные матчинги
+    findall(M, (
+        member(M, All),
+        \+ ( member(N, All), N \= M, subset_list(M, N) )
+    ), MaxMs).
+
+% Вспомогательный предикат для вывода
+print_matchings([]).
+print_matchings([M|Ms]) :-
+    write(M), nl,
+    print_matchings(Ms).
+
+/* Пример запуска:
+?- all_maximal_matchings(Ms), print_matchings(Ms).
+*/
